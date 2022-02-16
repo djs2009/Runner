@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+body {height: 2000px;}
+
+#wrap {width: 990px; margin: 0 auto;}
+
+#header {width: 785px; height: 93px; margin: 0 auto 9px;}
+#header h1 {width: 200px; height: 64px;float: left;}
+
+#header .topmenu {width: 250px; height: 45px; float: right; text-align: right; font-size: 0px;}
+#header .topmenu li {height: 45px; line-height: 45px; display: inline-block; 
+    background: url(../images/login.jpg) no-repeat 0 center; 
+    /* background-image: url(../images/login.jpg); background-repeat: no-repeat; background-position: 0 center; */ }
+#header .topmenu li a {display: block; padding: 0 15px; font-size: 13px;}
+
+
+#header .gnb {width: 785px; height: 28px; background-color: #414141; text-align: center; font-size: 0; float: left;}
+#header .gnb li {height: 28px; display: inline-block; line-height: 28px; border-right: #7e7e7e 1px solid;}
+#header .gnb li.last {border: none;}
+#header .gnb li a {font-size: 15px; color: #fff;  padding: 0 20px; display: block; transition: 0.3s;}
+#header .gnb li a:hover {padding: 0 35px;}
+
+
+#visual {width: 990px; height: 392px;}
+
+
+#section {width: 785px; height: 228px; margin: 32px auto 55px auto; }
+#section .banner {width: 508px; height: 164px; float: left;}
+#section .banner .small {width: 113px; height: 164px; float: left; background-color: #fff; margin-right: 15px;}
+#section .banner .big {width: 251px; height: 164px; float: right;}
+
+#section .pop {width: 248px; height: 164px; float: right;}
+#section .pop h2 {width: 248px; height: 29px; line-height: 29px; font-size: 16px; background: url(../images/rank.jpg) no-repeat 0 center; padding: 0 12px; border-bottom: 1px solid #e6e6e6;}
+#section .pop h2 span {color: #ff9555;}
+#section .pop li {width: 248px; height: 29px; line-height: 29px;; font-size: 12; text-indent: 22px; border-bottom: 1px solid #e6e6e6; }
+#section .pop li a {display: block;}
+#section .pop li a:hover {background-color: rgb(224, 221, 221);}
+
+
+#section .notice {width: 785px; height: 32px; float: left; margin-top: 32px; background-color: #e2e4e3;}
+
+#section .notice h2 {width: 107px; height: 32px; float: left; text-align: center; line-height: 32px; border-right: 1px solid #d5d5d5; font-size: 14px; }
+#section .notice ul {float: left;}
+#section .notice ul li {width: 600px; height: 32px; line-height: 32px; font-size: 12px; text-indent: 20px;}
+#section .notice a {display: block;}
+#section .notice a.more {float: right; width: 68px; height: 32px; text-align: center; line-height: 32px; font-size: 14px;}
+
+
+#footer {width: 990px; height: 96px; background-color: #3e3e3e;}
+#footer h1 {width: 140px; height: 60px; float: left; margin: 18px 0 0 175px;}
+#footer div {width: 480px; height: 60px; float: left; margin: 18px 0 0 80px;}
+
+#gotop { width: 25px; height: 70px; background: #383838; display: block; color: #fff; position: fixed; top: 420px; left: 50%; margin-left: 510px;}
+

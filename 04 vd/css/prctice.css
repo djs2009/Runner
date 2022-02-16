@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+
+body {font-family: "맑은고딕";}
+#wrap {width: 990px; margin: 0 auto; border:10px solid red}
+#header {width: 785px; height: 93px; margin: 0 auto 9px auto; background-color: #000}
+#header h1 {width: 200px; height: 64px; float: left; background-color: aquamarine;}
+#header .topmenu {width: 250px; height: 45px; float: right; background-color: aquamarine; text-align: right; font-size: 0;}
+
+
+#header .gnb {width: 785px; height: 28px; float: left; background-color: #414141; text-align: center; font-size: 0px;}
+#header .gnb li { height: 28; line-height: 28px; display:inline-block; border: #fff solid 1px;}
+#header .gnb li a {font-size: 15px; color: #fff; padding: 0 20px; border: #fff solid 1px;}
+
+
+
+#visual {width: 990px; height: 392px; background-color: cadetblue;}
+
+
+
+
+#section {width: 785px; height: 228px; margin: 32px auto 55px auto; background-color: aliceblue;}
+#section .banner_box {width: 508px; height: 164px; float: left; background-color: bisque;}
+#section .pop_box {width: 248px; height: 164px; float: right; background-color: bisque;}
+#section .notice_box {width: 785px; height: 32px; float: left; background-color: bisque; margin-top: 32px;}
+
+
+
+#footer {width: 990px; height: 96px; background-color: #3e3e3e;}
+
