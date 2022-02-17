@@ -65,12 +65,33 @@ body {font-family:'Nanum Gothic', sans-serif;}
 /* before/after는 content 필수 */
 
 #section div.prod {width: 269px; height: 180px; float: left;}
+.prod h2 {width: 100%; height: 25px; line-height: 25px; font-size: 16px; font-weight: bold; border-bottom: 1px solid #000; position: relative; margin: 20px 0 10px 0;}
+.prod h2 a {position: absolute; width: 53px; height: 18px; line-height: 18px; font-size: 12px; text-align: center; right: 0; bottom: 0;} 
+.prod h2 a i {font-size: 13px; float: right; margin-top: 3px;}
 
+#section .prod div {width: 100%; text-align: center;}
+#section .prod div ul {width: 124px; height: 120px; display: inline-block; vertical-align: top;}
+#section .prod li.thumb {width: 124px; height: 81px; overflow: hidden;}
+.prod li.thumb img {transition: 1s;}
+.prod li.thumb:hover img {transform: scale(1.3);}
 
-#section div.banner {width: 276px; height: 180px; float: left;}
+#section .prod li.tit {width: 124px; height: 24px; line-height: 24px; font-size: 13px;} 
 
+#section div.banner {width: 276px; height: 160px; float: left; padding-top: 20px;}
+#section div.banner > ul > li {width: 276px; height: 34px; border-bottom: 1px dashed #ababab; padding-top: 16px;}
+#section .banner li a {display: block; width: 100%; height: 100%;}
+#section .banner li h3 {width: 95px; float: left; font-size: 15px; color :#cd382a }
+#section .banner li h3 span {color: #222;}
+#section .banner li p {width: 150px; float: left; font-size: 12px; word-break: keep-all;}
+#section .banner li p span {color: #6387a8;}
+#section .banner li a > span {float: left; width: 15px; height: 15px; margin-top: 8px; background: #7e7f83; border-radius: 50%; overflow: hidden;}
 
-#section .center > span {width: 39px; height: 170px; float: left; background-color: blue;}
+#section .center li a > span ul {width: 30px; height: 15px; margin-left: -15px; transition: .5s;}
+#section .center li:hover a > span ul {margin-left: 0;}
+#section .center li a > span ul li {font-size: 10px; width: 15px; height: 15px; float: left; text-align: center; line-height: 15px; color: #fff;} 
+
+#section .center > span {width: 39px; height: 170px; float: left; background: url("../images/bar2.png") no-repeat center; margin-top: 20px;}
+
 
 
 #footer {width: 100%; height: 64px; background: #2c2c2c;}
