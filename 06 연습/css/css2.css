@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+#wrap{width: 900px; height: 2000px; margin: 0 auto;}
+
+#header {width: 900px; height: 140px; }
+#header h1 {width: 250px; height: 80px; background-color: #dd0c79;float: left; }
+#header .gnb {width: 500px; height: 80px; background-color: #fef200; float: right; margin: 20px 0;}
+
+#header .navi {width: 900px; height: 60px; background-color: #000; float: left; margin-top: 20px;}
+
+#section {width: 900px; height: 500px; }
+#section div.cube1 {width: 410px; height: 500px; float: left; margin: 40px 0;  background-color: #02a4d2; }
+#section div.cube2 {width: 410px; height: 500px; float: right; margin: 40px 0;  background-color: #02a4d2; }
+
+#visual {width: 900px; height: 200px;  float: left; background-color: #02a4d2;}
+
+#footer {width: 900px; height: 100px; margin-top: 30px; background-color: #02a4d2; float: left; }
+
+

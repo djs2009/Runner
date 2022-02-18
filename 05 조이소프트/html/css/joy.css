@@ -40,7 +40,7 @@ body {font-family:'Nanum Gothic', sans-serif;}
 
 
 /*가로형 다시*/
-.gnb li .lnb {position: absolute; width: 400px; background-color: #231e13; text-align-last: left; border-radius: 0 0 7px 7px; display: none;}
+.gnb li .lnb {position: absolute; width: 400px; background-color: #231e13; text-align-last: left; border-radius: 0 0 7px 7px; display: none;z-index: 2;}
 .gnb li:hover .lnb {display: block;}
 .gnb li .lnb li {display: inline-block;}
 .gnb li .lnb li  a {display: block; padding: 0 10px; color: #fff;}
@@ -48,10 +48,8 @@ body {font-family:'Nanum Gothic', sans-serif;}
 .gnb li .lnb4 {right: 0; text-align: right;}
 
 
-
-
-
 #visual {width: 100%; height: 422px; margin-top: 3px; background: url("../images/visual_main.png") center top no-repeat ;}
+
 
 
 #section {width: 100%; height: 208px;}
@@ -98,3 +96,68 @@ body {font-family:'Nanum Gothic', sans-serif;}
 #footer h1 {width: 130px; height: 40px; float: left; margin: 13px 0 0 70px; background-color: #000;}
 #footer p {width: 480px; height: 60px; float: left; margin-left: 100px; background-color: #000;}
 
+
+
+#visual_sub {width: 100%; height: 130px; overflow: hidden; position: relative;}
+#visual_sub img {animation: bg_ani 2s; position: absolute; left: 50%; transform: translateX(-50%);}
+
+/* animation - 이름 꼭 써야됨 / keyframes - 빈 프레임 */
+@keyframes bg_ani {
+    0% {transform: translateX(-50%) scale(1.2);}
+    100% {transform: translateX(-50%) scale(1);}
+}
+
+#section_sub {width: 100%;  margin-top: 3px; background: url("../images/section.png") repeat-x;}
+#section_sub:after {content: ""; display: block; clear:both}
+/* 자식한테 플롯이 있고, 부모의 높이가 없지만 필요한 경우 / clear:both 플롯값 안받겠다 */
+
+#section_sub .aside {width: 196px; height: 350px; float: left; background: #ddd; margin: 10px 20px 0 24px; }
+#section_sub .aside h2 {width: 100%; height: 45px; border-top: 10px solid #373228; border-bottom: 1px #ddd; font-size: 24px; line-height: 45px;}
+
+.aside .snb li {height: 75px; font-size: 16px; position: relative; transition: .5s; overflow: hidden;}
+.aside .snb li:before {content: ""; position: absolute; width: 4px; height: 15px; left: -10px; top: 2px; background: #b8303a; transition: .5s;}
+.aside .snb li a { color: #b8303a; display: block;}
+.aside .snb li a span {display: block; font-size: 11px; color: #999; margin-top: 6px; text-indent: 0;}
+
+.aside .snb li.on:before {content: ""; position: absolute; width: 4px; height: 15px; left: 0; top: 2px; background: #b8303a;}
+.aside .snb li.on {text-indent: 10px;}
+.aside .snb li.on span {text-indent: 0;}
+
+.aside .snb li:hover {text-indent: 10px;}
+.aside .snb li:hover span {text-indent: 0;}
+.aside .snb li:hover:before {left: 0;}
+
+
+.aside a.view {background: linear-gradient(180deg, #78ab8e, #5d8e74); font-size: 13px; color: #fff; padding: 11px 28px; border-radius: 5px; border: 1px solid #668175; 
+    box-shadow: 2px 2px 2px rgba(25, 60, 42, 0.2),
+                inset 0px 0px 0px rgba(255, 2555, 255, 0.5);
+    text-shadow: 1px 1px 1px #4a7c66; display: inline-block;}
+    
+.aside a.neon {padding: 20px 50px; background: #000; display: inline-block; margin-top: 50px; color: #fff; font-size: 20px; letter-spacing: 7px; font-weight: bold;
+        text-shadow: 0 0 5px red,
+                     0 0 5px red,
+                     0 0 20px red,
+                     0 0 20px red,
+                     0 0 30px red,
+                     0 0 30px red,
+                     0 0 40px red,
+                     0 0 40px red;
+}
+
+
+
+#section_sub .content {width: 659px; height: 600px; float: right; position: relative; border-left: 1px solid #d4dae1;}
+
+.content h3 {width: 617px; height: 47px; line-height: 47px; float: right; border-bottom: 1px solid #dddd; font-size: 24px; }
+.content h3 span {font-size: 14px; color: #999;}
+
+.content .bread {position: absolute; right: 0; height: 28px; top: 35px; color: #999; font-size: 12px;}
+.content .bread a {color: #999;}
+
+.content .article {width: 617px; float: right; margin-top: 35px; font-size: 16px;}
+.content .article p {font-size: 16px; color: #777; line-height: 1.3em;}
+
+.content .article .icons {text-align: center; padding-top: 40px;}
+.content .article .icons ul {width: 205px; height: 205px; border-radius: 50%; border: 1px dashed #777; display: inline-block; vertical-align: top; margin: 0 -18px; background: rgba(184, 206, 231, 0.1)}
+.content .article .icons ul li.icc {width: 74px; height: 74px; background:#000; margin: 40px auto 0 auto;}
+.content .article .icons ul li.tit {text-align: center; margin: 14px auto 0 auto; font-size: 16px; font-weight: bold; color: #5c5c5e; width: 100px; }
