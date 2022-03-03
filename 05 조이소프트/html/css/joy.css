@@ -4,7 +4,7 @@
 
 body {font-family:'Nanum Gothic', sans-serif;}
 
-.center {width: 900px; margin: 0 auto;}
+.center {width: 900px; margin: 0 auto; padding-bottom: 80px;}
 
 #header {width: 100%; height: 99px; margin-top: 3px; background: url("../images/header.png") ;}
 #header h1 {width: 170px; height: 60px; float: left;}
@@ -43,7 +43,7 @@ body {font-family:'Nanum Gothic', sans-serif;}
 .gnb li .lnb {position: absolute; width: 400px; background-color: #231e13; text-align-last: left; border-radius: 0 0 7px 7px; display: none;z-index: 2;}
 .gnb li:hover .lnb {display: block;}
 .gnb li .lnb li {display: inline-block;}
-.gnb li .lnb li  a {display: block; padding: 0 10px; color: #fff;}
+.gnb li .lnb li  a {display: block; padding: 0 13px; color: #fff;}
 
 .gnb li .lnb4 {right: 0; text-align: right;}
 
@@ -130,8 +130,15 @@ body {font-family:'Nanum Gothic', sans-serif;}
 
 .aside a.view {background: linear-gradient(180deg, #78ab8e, #5d8e74); font-size: 13px; color: #fff; padding: 11px 28px; border-radius: 5px; border: 1px solid #668175; 
     box-shadow: 2px 2px 2px rgba(25, 60, 42, 0.2),
-                inset 0px 0px 0px rgba(255, 2555, 255, 0.5);
-    text-shadow: 1px 1px 1px #4a7c66; display: inline-block;}
+                inset 0px 0px 0px rgba(255, 255, 255, 0.5);
+    text-shadow: 1px 1px 1px #4a7c66; display: inline-block;
+    top: 0; left: 0;}
+
+.aside a.view:active {
+    box-shadow: 0px 0px 2px rgba(25, 60, 42, 0.2),
+                inset 0px 0px 2px rgba(255, 255, 255, 0.5);
+                top: 2px; left: 2px;
+}
     
 .aside a.neon {padding: 20px 50px; background: #000; display: inline-block; margin-top: 50px; color: #fff; font-size: 20px; letter-spacing: 7px; font-weight: bold;
         text-shadow: 0 0 5px red,
@@ -146,18 +153,141 @@ body {font-family:'Nanum Gothic', sans-serif;}
 
 
 
-#section_sub .content {width: 659px; height: 600px; float: right; position: relative; border-left: 1px solid #d4dae1;}
+#section_sub .content {width: 659px; height: 600px;  float: right; position: relative; border-left: 1px solid #d4dae1; box-sizing: border-box;} 
 
-.content h3 {width: 617px; height: 47px; line-height: 47px; float: right; border-bottom: 1px solid #dddd; font-size: 24px; }
-.content h3 span {font-size: 14px; color: #999;}
+.content h3 {width: 617px; height: 47px; line-height: 47px; float: right; border-bottom: 1px solid #dddd; font-size: 24px; margin-top: 18px; }
+.content h3 span {font-size: 14px; color: #999; margin-left: 10px;}
 
 .content .bread {position: absolute; right: 0; height: 28px; top: 35px; color: #999; font-size: 12px;}
 .content .bread a {color: #999;}
 
-.content .article {width: 617px; float: right; margin-top: 35px; font-size: 16px;}
-.content .article p {font-size: 16px; color: #777; line-height: 1.3em;}
+.content .article {width: 617px; float: right; margin-top: 35px;}
+.content .article > p {font-size: 16px; color: #777; line-height: 1.3em;}
 
 .content .article .icons {text-align: center; padding-top: 40px;}
-.content .article .icons ul {width: 205px; height: 205px; border-radius: 50%; border: 1px dashed #777; display: inline-block; vertical-align: top; margin: 0 -18px; background: rgba(184, 206, 231, 0.1)}
-.content .article .icons ul li.icc {width: 74px; height: 74px; background:#000; margin: 40px auto 0 auto;}
-.content .article .icons ul li.tit {text-align: center; margin: 14px auto 0 auto; font-size: 16px; font-weight: bold; color: #5c5c5e; width: 100px; }
+.content .article .icons ul {width: 205px; height: 205px; border-radius: 50%; border: 1px dashed #777; display: inline-block; vertical-align: top; margin: 0 -18px; background: rgba(184, 206, 231, 0.1); transition: .3s;}
+
+.content .article .icons:hover ul {opacity: 0.4; transform: scale(0.9);}
+.content .article .icons ul:hover {opacity: 1; background:rgba(184, 206, 231, 1); transform: scale(1); position: relative; z-index: 5;}
+
+.content .article .icons ul li.icc {width: 74px; height: 74px; margin: 40px auto 0 auto; font-size: 65px; text-align: center;}
+.content .article .icons ul li.tit {text-align: center; margin: 14px auto 0 auto; font-size: 16px; font-weight: bold; color: #5c5c5e; width: 100px; line-height: 20px;}
+
+
+.content .article > button {font-size: 18px; padding: 14px 44px; background: linear-gradient(180deg, #e06158, #cb4f46) ; color: #fff; border-radius: 6px; border: 0; 
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7),
+                inset 0px 0px 2px rgba(255, 255, 255,1);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    margin: 35px auto 0 auto; display: block; cursor: pointer;}
+
+    .wrap_controllers {display: none;}
+
+    .map > div > div > div:nth-child(6) > div {
+        animation: polzzac 0.5s infinite ease-out alternate;
+    } 
+
+    @keyframes polzzac {
+        0%{margin-top: -60px;}
+        100%{margin-top: -70px;}
+    }
+
+
+
+/* 신상품 */
+.article .prod:after {content: ""; display: block; clear: both;}
+
+.article .prod ul {width: 145px; height: 100px; position: relative; overflow: hidden; float: left; margin: 0 12px 19px 0;}
+.article .prod ul:nth-child(4n) {margin-right: 0;}
+.article .prod ul li.thumbnail {width: 139px; height: 93px; border: 3px solid #333;}
+.article .prod ul li.subject {width: 100%; height: 39px; text-align: center; line-height: 34px; font-size: 15px; color: #fff; background: rgba(0, 0, 0, 0.5); position: absolute; bottom:-34px; transition: .5s;}
+
+.article .prod ul:hover li.subject {bottom: 0px;}
+
+.pagenavi {text-align: center;}
+.pagenavi p {display: inline-block; vertical-align: top; width: 36px; height: 36px; line-height: 36px; text-align: center; border: 1px solid #333;}
+.pagenavi ul {display: inline-block; vertical-align: top; border: 1px solid #333;}
+.pagenavi ul li {float: left; width: 36px; height: 36px; line-height: 36px; text-align: center;}
+.pagenavi ul li a {display: block;}
+.pagenavi ul li:hover {background: #c4c4c4;}
+.pagenavi p:hover {background: #4d4949; color: #fff;}
+.pagenavi ul li:last-child {border-right: 0;}
+
+
+/* 로그인 */
+.login {}
+.login h3 {width: 100%; height: 89px; line-height: 89px; border-bottom: 1px solid #444; font-size: 30px; color:#333; text-align: center; }
+.login fieldset {width: 410px; height: 300px; margin: 45px auto 0 auto;}
+
+.login input[name=id],
+.login input[name=pw]
+ {width: 408px; height: 46px; border: 1px solid #ddd; text-indent: 15px; font-size: 14px; margin-bottom: 10px;}
+
+.login input[name=id]:focus,
+.login input[name=pw]:focus
+ {border:1px solid #de964f}
+
+.login input::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+ }
+
+ .login .idsave {font-size: 13px; color:#777}
+ .login input[type=checkbox] {width: 18px; height: 18px; float: left; margin-top: 0px; margin-right: 6px; display: none;}
+
+
+ .login button {width: 100%; height: 50px; background: #444; color:#fff; font-size: 16px; cursor: pointer; margin-top: 20px;}
+
+ .login .findbox {margin-top: 12px;}
+ .login a {width: 205px; height: 40px; line-height: 40px; float: left; border: 1px solid #ddd; box-sizing: border-box; text-align: center; font-size: 13px; color:#777;}
+
+ .login a:last-child {border-left: 0;}
+
+ 
+.idsave label {display: block;}
+.idsave label span { display: inline-block; width: 18px; height: 18px; border: 1px solid #777; margin-right: 6px; float: left; }
+.idsave label span i {width: 18px; height: 18px; float: left;   position: relative; transition: .3s; transform: scale(0);}
+
+.idsave label span i:before,
+.idsave label span i:after{content: ""; height: 2px; background: #000; position: absolute;}
+
+.idsave label span i:before {width: 7px; top: 8px; left: 2px; transform: rotate(45deg);}
+.idsave label span i:after {width: 10px; top: 8px; left: 6px; transform: rotate(-45deg);}
+
+.idsave label p {float: left; cursor: pointer;}
+
+#idcheck:checked ~ label span i {transform: scale(1);}
+
+/* 회원 가입*/
+.join h3 {width: 100%; height: 89px; line-height: 89px; border-bottom: 1px solid #444; font-size: 30px; color:#333; text-align: center; margin-bottom: 30px;}
+.join fieldset ul {width: 785px; margin: 0 auto; border-top: 2px solid #555; border-bottom: 2px solid #555;}
+
+.join fieldset ul li {width: 180px; height: 54px; line-height: 54px; background: #f9f9f9; border-bottom: 1px solid #ccc; text-indent: 30px; font-size: 15px; color: #333; float: left; box-sizing: border-box;}
+.join fieldset ul li:nth-child(2n) {width: 604px; background-repeat: 0; background: none;}
+.join fieldset ul li:last-child(1) {border-bottom:none}
+.join fieldset ul li:last-child(2) {border-bottom:none}
+
+.join li span {font-size: 12px; float: left;}
+.join li a {float: left; width: 112px; height: 31px; text-align: center; line-height: 31px; border: 1px solid #c0c2c4; background: linear-gradient(180deg, #fff, #edeff1); font-size: 13px; box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7); text-indent: 0; margin: 10px 0 0 10px;} 
+
+.join li input {float: left; width: 294px; height: 31px; border: 1px solid #ccc; margin: 10px 0 0 24px; text-indent: 10px;}
+.join li span.id_span {color:#f00; width: 140px; line-height: 14px; text-indent: 0; margin: 5px 0 0 10px;} 
+
+.join .btn_box {margin-top: 20px; text-align: center;}
+.join .btn_box input{display: inline-block;}
+
+
+.join li p {float: left; text-indent: 0; margin-top: 10px;}
+.join li p:first-child {margin-left: 25px;}
+.join li p input[type=checkbox],
+.join li p input[type=radio]
+{width: 18px; height: 18px; float: left; margin: 18px 5px 0 0 ;}
+
+.join input#photo {display: none;}
+.join input#photo + label {width: 100px; height: 30px; line-height: 30px;  text-indent: 0; text-align: center; margin: 10px 0 0 25px; cursor: pointer;  border: 1px solid #000;}
+.join input#photo + label:hover {background:#f0f0f0;}
+
+.join li.area {height: 300px;}
+.join li.area textarea {width: 550px; height: 250px; margin-top: 15px 0 0 30px;padding: 10px; resize: none;}
+
+.join li.area div {width: 550px; height: 250px; line-height: 20px; margin-top: 15px 0 0 30px; font-size: 13px; padding: 10px; resize: none; white-space: pre-wrap; overflow-y: auto; border: 1px solid #777;}
