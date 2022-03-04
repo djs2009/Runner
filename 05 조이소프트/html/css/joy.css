@@ -264,8 +264,7 @@ body {font-family:'Nanum Gothic', sans-serif;}
 
 .join fieldset ul li {width: 180px; height: 54px; line-height: 54px; background: #f9f9f9; border-bottom: 1px solid #ccc; text-indent: 30px; font-size: 15px; color: #333; float: left; box-sizing: border-box;}
 .join fieldset ul li:nth-child(2n) {width: 604px; background-repeat: 0; background: none;}
-.join fieldset ul li:last-child(1) {border-bottom:none}
-.join fieldset ul li:last-child(2) {border-bottom:none}
+
 
 .join li span {font-size: 12px; float: left;}
 .join li a {float: left; width: 112px; height: 31px; text-align: center; line-height: 31px; border: 1px solid #c0c2c4; background: linear-gradient(180deg, #fff, #edeff1); font-size: 13px; box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7); text-indent: 0; margin: 10px 0 0 10px;} 
@@ -276,16 +275,19 @@ body {font-family:'Nanum Gothic', sans-serif;}
 .join .btn_box {margin-top: 20px; text-align: center;}
 .join .btn_box input{display: inline-block;}
 
+.join li:nth-last-child(1),
+.join li:nth-last-child(2) {border-bottom:0}
 
-.join li p {float: left; text-indent: 0; margin-top: 10px;}
+
+.join li p {float: left; text-indent: 0; margin-right: 10px;}
 .join li p:first-child {margin-left: 25px;}
 .join li p input[type=checkbox],
 .join li p input[type=radio]
-{width: 18px; height: 18px; float: left; margin: 18px 5px 0 0 ;}
+{width: 18px; height: 18px; float: left; margin: 18px 5px 0 0 ; background:#5a4040;}
 
-.join input#photo {display: none;}
-.join input#photo + label {width: 100px; height: 30px; line-height: 30px;  text-indent: 0; text-align: center; margin: 10px 0 0 25px; cursor: pointer;  border: 1px solid #000;}
-.join input#photo + label:hover {background:#f0f0f0;}
+.join input #photo {display: none;}
+.join input #photo + label {width: 100px; height: 30px; line-height: 30px;  display: block; text-indent: 0; text-align: center; margin: 10px 0 0 25px; cursor: pointer;  border: 1px solid #777;}
+.join input #photo + label:hover {background:#f0f0f0;}
 
 .join li.area {height: 300px;}
 .join li.area textarea {width: 550px; height: 250px; margin-top: 15px 0 0 30px;padding: 10px; resize: none;}

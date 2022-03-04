@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+html, body {height: 100%;}
+body {background: url("../images/winter.jpg"); background-size: cover;}
+
+#snowbox1 {width: 100vw; height: 100vh; background: url("../images/snow.png"); animation: snow_ani1 3s infinite linear; position: absolute; left: 0; top: 0; z-index: 1; opacity: 60%}
+
+@keyframes snow_ani1 {
+    0%{background-position: 0 0;}
+    100%{background-position: 100px 200px;}
+}
+
+#snowbox2 {width: 100vw; height: 100vh; background: url("../images/snow.png"); animation: snow_ani2 2.5s infinite linear; position: absolute; background-size: 200%; left: 0; top: 0; z-index: 2; opacity: 70%;}
+
+@keyframes snow_ani2 {
+    0%{background-position: 0 0;}
+    100%{background-position: 200px 400px;}
+}
+
+#snowbox3 {width: 100vw; height: 100vh; background: url("../images/snow.png"); animation: snow_ani3 1.5s infinite linear; position: absolute; background-size: 200%; left: 0; top: 0; z-index: 3; opacity: 80%;}
+
+@keyframes snow_ani3 {
+    0%{background-position: 0 0;}
+    100%{background-position: 400px 400px;}
+}
+
+#header {width: 100%; height: 80px; background: rgba(119,133,159, 0.9); position: absolute; left: 0; top: -80px; z-index: 7; transition: .5s;} 
+#header:hover {top: 0;}
+#header .gnb {width: 800px; height: 80px; margin: 0 auto;}
+#header .gnb li {width: 200px; height: 80px; line-height: 80px; float: left; text-align: center;}
+#header .gnb li a{display: block; color: #fff;}
+
+#header .hamburger {position: absolute; width: 60px; height: 30px; border-radius: 0 0 50px 50px; background: rgba(131, 144, 170, 0.9); top: 80px; left: 50%; margin-left: -40px;}
+
+.hamburger span {position: absolute; width: 18px; height: 1px; background: #fff; left: 21px; top: 11px; transition: .3s;}
+.hamburger span:before,
+.hamburger span:after {content: ""; position: absolute; width: 100%; height: 100%; background: #fff; transition: .5s;}
+.hamburger span:before {top: -4px; left: 0;}
+.hamburger span:after {top: 4px; left: 0;}
+
+#header:hover .hamburger span {background: transparent;}
+#header:hover .hamburger span:before {transform: rotate(-45deg); left: 0px; top: 0; width: 60%; }
+#header:hover .hamburger span:after {transform: rotate(45deg); left: 7px; top: 0;  width: 60%; }
